@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.css";
-import { ReactComponent as ArrowDownSvg } from "../../assets/svgs/downarrow.svg";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk-379465.svg";
 
 const Career = () => {

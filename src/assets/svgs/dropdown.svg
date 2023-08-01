@@ -1,0 +1,22 @@
+<svg
+  width="20px"
+  height="20px"
+  viewBox="0 0 24.00 24.00"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="#ffffff"
+  stroke="#ffffff"
+  stroke-width="0.00024000000000000003"
+>
+  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+  <g
+    id="SVGRepo_tracerCarrier"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke="#CCCCCC"
+    stroke-width="0.048"
+  ></g>
+  <g id="SVGRepo_iconCarrier">
+    <rect x="0" fill="none" width="20" height="20"></rect>
+    <g><path d="M20 9l-8 8-8-8 1.414-1.414L12 14.172l6.586-6.586"></path></g>
+  </g>
+</svg>

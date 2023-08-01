@@ -7,7 +7,7 @@
   <circle cx="50" cy="50" r="50" fill="#1f283d"></circle>
   <path
     d="M 50,50 L 50,0 A 50,50 0 0 1 99.10496891508744,40.581824600895544 Z"
-    fill="#ff6e81"
+    fill="#e4e4e4"
     transform="rotate(0 50 50)"
   ></path>
   <path
@@ -17,7 +17,7 @@
   ></path>
   <path
     d="M 50,50 L 50,0 A 50,50 0 0 1 99.10496891508744,40.581824600895544 Z"
-    fill="#ff6e81"
+    fill="#e4e4e4"
     transform="rotate(90 50 50)"
   ></path>
   <path
@@ -27,7 +27,7 @@
   ></path>
   <path
     d="M 50,50 L 50,0 A 50,50 0 0 1 99.10496891508744,40.581824600895544 Z"
-    fill="#ff6e81"
+    fill="#e4e4e4"
     transform="rotate(180 50 50)"
   ></path>
   <path
@@ -37,7 +37,7 @@
   ></path>
   <path
     d="M 50,50 L 50,0 A 50,50 0 0 1 99.10496891508744,40.581824600895544 Z"
-    fill="#ff6e81"
+    fill="#e4e4e4"
     transform="rotate(270 50 50)"
   ></path>
   <path

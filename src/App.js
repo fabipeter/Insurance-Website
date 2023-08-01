@@ -1,10 +1,12 @@
 import { ReactComponent as LogoSvg } from "./logo.svg";
+import { ReactComponent as DropDownSvg } from "./assets/svgs/dropdown.svg";
 import "./App.css";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import { FiKey } from "react-icons/fi";
 import Blog from "./components/Blog/Blog";
 import Career from "./components/Career/Career";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="#Services">Services</a>
+                <a href="#Services">Services </a>
+                <DropDownSvg className="navDropDown" />
               </li>
               <li>
                 <a href="#About">About us</a>
@@ -57,6 +60,7 @@ function App() {
         <Services />
         <Blog />
         <Career />
+        <About />
       </div>
     </div>
   );
