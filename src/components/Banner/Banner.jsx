@@ -1,9 +1,8 @@
 import React from "react";
 import "./styles.css";
-// import { HiArrowLongDown } from "react-icons/hi2";
-import { TbAsteriskSimple } from "react-icons/tb";
 import { ReactComponent as ArrowDownSvg } from "../../assets/svgs/downarrow.svg";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk-379465.svg";
+
 const Banner = () => {
   return (
     <div id="Banner" className="main">

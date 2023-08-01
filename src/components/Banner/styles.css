@@ -34,14 +34,14 @@
 .infoImageChild {
   width: 80%;
   height: 550px;
-  background: url(../../assets/pexels-pixabay-51377.jpg);
+  background: url(../../assets/pexels-alessandro-kelvin-2376268.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 200px;
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
 }
-.dot {
+.infoChild .dot {
   height: 45px;
   width: 45px;
   background-color: white;
@@ -52,7 +52,7 @@
   align-items: center;
 }
 
-.dot svg {
+.infoChild .dot svg {
   height: 30px;
   width: 30px;
   fill: var(--mainBlue);

@@ -14,6 +14,10 @@ body {
 .font-face-gr {
   font-family: "GratelosBold";
 }
+.wrapper {
+  max-width: 1512px;
+  /* text-align: center; */
+}
 .HomePage {
   padding: 50px 50px 70px 50px;
 }
@@ -24,11 +28,11 @@ body {
   /* background-color: var(--mainBlue); */
   background-image: linear-gradient(
     to bottom,
-    #1f283d,
-    #1a2233,
-    #161c29,
-    #111620,
-    #0b0f17
+    #091d33,
+    #0b111e,
+    #0b111e,
+    #0b111e,
+    #080c18
   );
 }
 nav {

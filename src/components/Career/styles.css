@@ -1,0 +1,114 @@
+.careerMain {
+  display: flex;
+  padding: 40px 60px 0px 60px;
+}
+
+.careerText {
+  /* display: flex; */
+  align-items: start;
+  height: 550px;
+  width: 30%;
+  padding-top: 80px;
+  padding-right: 60px;
+  /* transform: scaleY(1.4); */
+  /* font-weight: 900 !important; */
+}
+
+.careerText div {
+  font-size: 85px;
+  line-height: 1em;
+}
+
+.careerText div:nth-child(3) {
+  font-size: 165px;
+  line-height: 1em;
+}
+
+.careerInfo {
+  width: 70%;
+  display: flex;
+}
+.careerInfo .info {
+  width: 60%;
+  padding-top: 60px;
+}
+.careerInfo .infoimage {
+  width: 39%;
+  padding-top: 0px;
+}
+.careerInfo .infoChild {
+  padding-bottom: 3.5em;
+}
+.careerInfo .infoChild:nth-child(2) {
+  padding-bottom: 2em;
+}
+.careerInfo .infoImageChild {
+  width: 85%;
+  height: 580px;
+  background: url(../../assets/pexels-kampus-production-6248428.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 200px;
+  box-shadow: unset;
+  /* box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415); */
+}
+.careerInfo .infoChild .dot {
+  height: 45px;
+  width: 45px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.careerInfo .infoChild .dot svg {
+  height: 30px;
+  width: 30px;
+  fill: var(--mainBlue);
+  transform: rotate(85deg);
+}
+
+.careerInfo .infoChild:nth-child(2) .dot svg {
+  height: 30px;
+  width: 30px;
+  fill: var(--mainBlue);
+  transform: rotate(67deg);
+}
+
+.careerInfo .infotext {
+  padding-top: 1.5em;
+}
+.careerInfo .infotextlink {
+  color: var(--mainSkyBlue);
+}
+.careerInfo .infotextlink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.careerInfoButton {
+  /* padding-left: 40px; */
+  display: flex;
+  justify-content: start;
+}
+.career-button {
+  color: #cf6077;
+  background-color: #080c18;
+  border: 1.5px solid #e36b7a;
+  border-radius: 2em;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 23vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.career-button:hover {
+  color: #ffffff;
+  /* background-color: transparent; */
+  border: 1.5px solid #f2f5f7;
+  transition: all ease-in-out 350ms;
+}
