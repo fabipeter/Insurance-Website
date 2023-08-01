@@ -6,29 +6,33 @@
   display: flex;
   align-items: start;
   height: 550px;
-  font-size: 130px;
+  font-size: 185px;
   width: 50%;
   line-height: 1em;
-  padding-top: 100px;
-  padding-right: 100px;
+  padding-top: 50px;
+  padding-right: 80px;
+  /* transform: scaleY(1.4); */
+  /* font-weight: 900 !important; */
 }
 
 .bannerInfo {
   width: 50%;
   display: flex;
-  padding-top: 100px;
 }
 .info {
   width: 50%;
+  padding-top: 90px;
 }
 .infoimage {
   width: 50%;
+  padding-top: 55px;
+
 }
 .infoChild {
   padding-bottom: 3.5em;
 }
 .infoImageChild {
-  width: 100%;
+  width: 80%;
   height: 550px;
   background: url(../../assets/pexels-pixabay-51377.jpg);
   background-position: center center;
@@ -36,7 +40,6 @@
   background-repeat: no-repeat;
   border-radius: 200px;
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
-
 }
 .dot {
   height: 45px;
@@ -50,9 +53,10 @@
 }
 
 .dot svg {
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   fill: var(--mainBlue);
+  transform: rotate(105deg);
 }
 
 .infotext {
@@ -69,12 +73,12 @@
   width: fit-content;
   border-bottom-left-radius: 200px;
   border-bottom-right-radius: 200px;
-  border-top: 0px;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  border-top: transparent;
+  padding-bottom: 1em;
+  padding-top: 1em;
   background-image: linear-gradient(
     to top,
-    #1f283d,
+    #1a2233,
     #1a2233,
     #161c29,
     #111620,
@@ -84,4 +88,5 @@
 .downarrow svg {
   width: fit-content;
   fill: aliceblue;
+  stroke: #ffffff;
 }

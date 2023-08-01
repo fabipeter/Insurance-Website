@@ -10,11 +10,15 @@ body {
   overflow-x: hidden;
   background-color: var(--mainBackground);
 }
+
+.font-face-gr {
+  font-family: "GratelosBold";
+}
 .HomePage {
   padding: 50px 50px 70px 50px;
 }
 .bannerSection {
-  padding: 30px 50px 0px 50px;
+  padding: 50px 50px 0px 70px;
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
   /* background-color: var(--mainBlue); */
@@ -78,7 +82,7 @@ nav {
   margin: 0 0.7vw;
 }
 .nav-links li a:hover {
-  color: #61dafb;
+  color: var(--mainSkyBlue);
 }
 .nav-links li {
   position: relative;
@@ -88,7 +92,7 @@ nav {
   display: block;
   height: 3px;
   width: 0%;
-  /* background-color: #61dafb; */
+  /* background-color: var(--mainSkyBlue); */
   position: absolute;
   transition: all ease-in-out 250ms;
   margin: 0 0 0 10%;
@@ -135,8 +139,8 @@ nav {
 } */
 .join-button {
   color: #131418;
-  background-color: #61dafb;
-  border: 1.5px solid #61dafb;
+  background-color: var(--mainSkyBlue);
+  border: 1.5px solid var(--mainSkyBlue);
   border-radius: 2em;
   padding: 1rem 2.3rem;
   font-size: 1rem;

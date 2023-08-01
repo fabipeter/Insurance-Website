@@ -1,17 +1,18 @@
 import React from "react";
 import "./styles.css";
 // import { HiArrowLongDown } from "react-icons/hi2";
-import { FaStarOfLife } from "react-icons/fa";
-import { ReactComponent as ArrowDownSvg } from "../../assets/svgs/down-arrow-svgrepo-com (1).svg";
+import { TbAsteriskSimple } from "react-icons/tb";
+import { ReactComponent as ArrowDownSvg } from "../../assets/svgs/downarrow.svg";
+import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk-379465.svg";
 const Banner = () => {
   return (
     <div id="Banner" className="main">
-      <div className="bannerText">Darcy's Insurance products</div>
+      <div className="bannerText font-face-gr">Darcy's insurance products</div>
       <div className="bannerInfo">
         <div className="info">
           <div className="infoChild">
             <span className="dot">
-              <FaStarOfLife />
+              <AsteriskSvg />
             </span>
             <div className="infotext">
               <div>
@@ -23,7 +24,7 @@ const Banner = () => {
           </div>
           <div className="infoChild">
             <span className="dot">
-              <FaStarOfLife />
+              <AsteriskSvg />
             </span>
             <div className="infotext">
               <div>We offer a choice of low</div>
