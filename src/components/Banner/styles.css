@@ -11,6 +11,7 @@
   line-height: 1em;
   padding-top: 50px;
   padding-right: 80px;
+  font-family: "GratelosBold";
   /* transform: scaleY(1.4); */
   /* font-weight: 900 !important; */
 }
@@ -26,7 +27,6 @@
 .infoimage {
   width: 50%;
   padding-top: 55px;
-
 }
 .infoChild {
   padding-bottom: 3.5em;
@@ -34,7 +34,7 @@
 .infoImageChild {
   width: 80%;
   height: 550px;
-  background: url(../../assets/pexels-alessandro-kelvin-2376268.jpg);
+  background: url(../../assets/pexels-alessandro-kelvin-2376268\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -19,7 +19,7 @@
   width: 50%;
   height: 90%;
   border-radius: 45px;
-  background: url(../../assets/pexels-jean-van-der-meulen-1457842.jpg);
+  background: url(../../assets/pexels-jean-van-der-meulen-1457842\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 .cell2 {
   width: 15%;
   height: 90%;
-  background: url(../../assets/pexels-quang-nguyen-vinh-11669595.jpg);
+  background: url(../../assets/pexels-quang-nguyen-vinh-11669595\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,15 +47,15 @@
 .cell3contents {
   padding-top: 40px;
   padding-left: 40px;
-
 }
-.cell3Button{
+.cell3Button {
   display: flex;
   justify-content: center;
 }
 .cell3Title {
   font-size: 55px;
   text-align: start;
+  font-family: "GratelosBold";
 }
 .cell3Text {
   font-size: 14px;
@@ -66,7 +66,7 @@
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/pexels-jay-pizzle-3849554.jpg);
+  background: url(../../assets/pexels-jay-pizzle-3849554\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/pexels-tomáš-malík-2581922.jpg);
+  background: url(../../assets/pexels-tomáš-malík-2581922\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,7 +89,7 @@
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/pexels-tima-miroshnichenko-5452239.jpg);
+  background: url(../../assets/pexels-tima-miroshnichenko-5452239\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

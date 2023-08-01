@@ -48,7 +48,7 @@
 .consultantImage1 {
   width: 27%;
   height: 95%;
-  background: url(../../assets/pexels-christina-morillocopy.jpg);
+  background: url(../../assets/pexels-christina-morillocopy\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@
 .consultantImage2 {
   width: 27%;
   height: 95%;
-  background: url(../../assets/pexels-george-milton-6953924.jpg);
+  background: url(../../assets/pexels-george-milton-6953924\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -135,12 +135,13 @@
   fill: var(--mainBlue);
   transform: rotate(78deg);
 }
-.blogInfo .infoText{
+.blogInfo .infoText {
   padding-left: 30px;
 }
 
 .blogInfo .infoText div {
   font-size: 85px;
+  font-family: "GratelosBold";
 }
 /* @media (min-width: 960px) {
   .carousel .control-dots {

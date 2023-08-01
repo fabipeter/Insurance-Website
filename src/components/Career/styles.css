@@ -17,6 +17,7 @@
 .careerText div {
   font-size: 85px;
   line-height: 1em;
+  font-family: "GratelosBold";
 }
 
 .careerText div:nth-child(3) {
@@ -45,7 +46,7 @@
 .careerInfo .infoImageChild {
   width: 85%;
   height: 580px;
-  background: url(../../assets/pexels-kampus-production-6248428.jpg);
+  background: url(../../assets/pexels-kampus-production-6248428\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
