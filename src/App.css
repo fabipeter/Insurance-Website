@@ -31,7 +31,7 @@ body {
   /* background-color: var(--mainBlue); */
   background-image: linear-gradient(
     to bottom,
-    #091d33,
+    #0a1d33,
     #0b111e,
     #0b111e,
     #0b111e,
@@ -59,9 +59,14 @@ nav {
 .logo svg {
   height: 50px;
   width: 50px;
+  /* animation: ini 3s ease-in backwards; */
   animation: spinner 3s ease-out infinite;
 }
-
+/* @keyframes ini {
+ 100%{
+  transform: translateX(100%);
+ }
+} */
 @keyframes spinner {
   from {
     transform: rotate(0deg);
