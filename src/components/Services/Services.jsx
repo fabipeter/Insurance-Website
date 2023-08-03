@@ -1,14 +1,16 @@
 import React from "react";
 import "./styles.css";
-const Services = () => {
+
+const Services = (props) => {
+  const { animate, innerRef } = props;
   return (
-    <div id="Services" className="servicesMain">
+    <div id="Services" className="servicesMain" ref={innerRef}>
       <div className="firstRow">
-        <div className="cell1">
+        <div className={`cell1 ${animate && "animated"}`}>
           <div className="service-button">Home insurance</div>
         </div>
-        <div className="cell2"></div>
-        <div className="cell3">
+        <div className={`cell2 ${animate && "animated"}`}></div>
+        <div className={`cell3 ${animate && "animated"}`}>
           <div className="cell3contents">
             <div className="cell3Title font-face-gr">Best choice</div>
             <div className="cell3Text">
@@ -24,13 +26,13 @@ const Services = () => {
         </div>
       </div>
       <div className="secondRow">
-        <div className="cell4">
+        <div className={`cell4 ${animate && "animated"}`}>
           <div className="service-button">Vehicle damage</div>
         </div>
-        <div className="cell5">
+        <div className={`cell5 ${animate && "animated"}`}>
           <div className="service-button">Mortgage insurance</div>
         </div>
-        <div className="cell6">
+        <div className={`cell6 ${animate && "animated"} `}>
           <div className="service-button">Medical expenses</div>
         </div>
       </div>

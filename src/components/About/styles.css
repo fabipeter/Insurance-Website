@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .aboutMain {
   position: relative;
   padding: 140px 60px 0px 60px;
@@ -37,6 +46,10 @@
   font-size: 60px;
   font-family: "GratelosBold";
 }
+.question.animated {
+  animation: appearIn 1s ease-in forwards;
+  transform-origin: -100% 100%;
+}
 .questionMark {
   font-size: 67px;
   font-family: "BebasNeueBold";
@@ -64,6 +77,27 @@
   color: #131d2c;
 }
 
+.aboutInsuranceOptions.animated div:nth-child(1) {
+  animation: appearIn 1.5s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutInsuranceOptions.animated div:nth-child(2) {
+  animation: appearIn 1.9s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutInsuranceOptions.animated div:nth-child(3) {
+  animation: appearIn 2.3s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutInsuranceOptions.animated div:nth-child(4) {
+  animation: appearIn 2.7s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutInsuranceOptions.animated div:nth-child(5) {
+  animation: appearIn 3.1s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+
 .aboutForm {
   width: 66%;
   display: flex;
@@ -73,8 +107,16 @@
   width: 50%;
   margin-right: 40px;
 }
+.firstField.animated {
+  animation: fadeIn 1.5s ease-in forwards;
+  transform-origin: 50% 50%;
+}
 .secondField {
   width: 50%;
+}
+.secondField.animated {
+  animation: fadeIn 2.3s ease-in forwards;
+  transform-origin: 50% 50%;
 }
 .label {
   font-size: 12px;
@@ -115,6 +157,19 @@ input::placeholder {
   font-size: 20px;
   padding-bottom: 15px;
 }
+.aboutCell2.animated .heading:nth-child(1) {
+  animation: appearIn 1.5s ease-in forwards;
+  transform-origin: 0% 100%;
+}
+.aboutCell2.animated .heading:nth-child(2) {
+  animation: appearIn 2s ease-in forwards;
+  transform-origin: 0% 100%;
+}
+.aboutCell2.animated .heading:nth-child(3) {
+  animation: appearIn 2.5s ease-in forwards;
+  transform-origin: 0% 100%;
+}
+
 .option {
   font-size: 15px;
   font-weight: 100;
@@ -122,10 +177,31 @@ input::placeholder {
   color: #838790;
 }
 
+.aboutCell2.animated .serviceOption .d-flex:nth-child(1) {
+  animation: appearIn 2s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutCell2.animated .serviceOption .d-flex:nth-child(2) {
+  animation: appearIn 2.5s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutCell2.animated .serviceOption .d-flex:nth-child(3) {
+  animation: appearIn 2.5s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.aboutCell2.animated .serviceOption .d-flex:nth-child(4) {
+  animation: appearIn 3s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+
 .aboutCalculateButton {
   padding-top: 40px;
   display: flex;
   justify-content: start;
+}
+.aboutCalculateButton.animated {
+  animation: appearIn 2.8s ease-in forwards;
+  transform-origin: 50% 50%;
 }
 .about-button {
   color: #ffffff;
@@ -135,7 +211,7 @@ input::placeholder {
   padding: 1rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  width: 493px;
+  width: 465px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -166,6 +242,12 @@ input::placeholder {
   animation: spinner 3s ease-out infinite;
 }
 
+.aboutCell3.animated svg {
+  animation: appearIn 3s ease-in forwards;
+}
+.aboutCell3.animated .label {
+  animation: appearIn 3s ease-in forwards;
+}
 @keyframes spinner {
   from {
     transform: rotate(0deg);
@@ -180,4 +262,8 @@ input::placeholder {
   font-weight: 200;
   text-decoration: underline;
   padding-right: 60px;
+}
+
+.aboutCell4.animated {
+  animation: appearIn 3s ease-in forwards;
 }

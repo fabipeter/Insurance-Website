@@ -3,25 +3,30 @@ import "./styles.css";
 import { ReactComponent as ArrowDownSvg } from "../../assets/svgs/download.svg";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk-379465.svg";
 
-const Banner = () => {
+const Banner = (props) => {
+  const { animate } = props;
   return (
     <div id="Banner" className="main">
-      <div className="bannerText font-face-gr">Darcy's insurance products</div>
+      <div className={`bannerText ${animate && "animated"} font-face-gr`}>
+        <div className=" font-face-gr"> Darcy's</div>
+        <div className=" font-face-gr">insurance</div>
+        <div className=" font-face-gr">products</div>
+      </div>
       <div className="bannerInfo">
-        <div className="info">
-          <div className="infoChild">
+        <div className={`bannerInfoChild ${animate && "animated"}`}>
+          <div className="bannerInfoGrandChild">
             <span className="dot">
               <AsteriskSvg />
             </span>
-            <div className="infotext">
+            <div className="bannerInfotext">
               <div>
-                Our <span className="infotextlink">plans</span> are saving
+                Our <span className="bannerInfotextlink">plans</span> are saving
               </div>
               <div>policyholders 30%-60%</div>
               <div>on premiums</div>
             </div>
           </div>
-          <div className="infoChild">
+          <div className="bannerInfoGrandChild">
             <span className="dot">
               <AsteriskSvg />
             </span>
@@ -32,13 +37,15 @@ const Banner = () => {
               <div>services.</div>
             </div>
           </div>
-          <div className="downarrow">
+          <div className={`downarrow ${animate && "animated"}`}>
             {/* <HiArrowLongDown /> */}
             <ArrowDownSvg />
           </div>
         </div>
-        <div className="infoimage">
-          <div className="infoImageChild"></div>
+        <div className="bannerInfoimage">
+          <div
+            className={`bannerInfoImageChild ${animate && "animated"}`}
+          ></div>
         </div>
       </div>
     </div>

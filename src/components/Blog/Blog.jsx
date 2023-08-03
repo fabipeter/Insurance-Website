@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "./styles.css";
 import { Carousel } from "react-responsive-carousel";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk2.svg";
-const Blog = () => {
+
+const Blog = (props) => {
+  const { animate, innerRef } = props;
+//   const [animated, setAnimated] = useState(0);
   return (
-    <div id="Blog" className="blogMain">
+    <div id="Blog" className="blogMain" ref={innerRef}>
       <div className="blogWrapper">
         <div className="carouselSection">
-          <Carousel showThumbs={false} showArrows={false} showStatus={false}>
-            <div className="carouselBlock">
+          <Carousel
+            showThumbs={false}
+            showArrows={false}
+            showStatus={false}
+            className={`sos ${animate && "animated"}`}
+            
+          >
+            <div className={`carouselBlock ${animate && "animated"}`}>
               <div className="consultantImage1"></div>
               <div className="consultantInfo">
                 <div className="consultantInfocontents">
@@ -31,7 +40,7 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            <div className="carouselBlock">
+            <div className={`carouselBlock ${animate && "animated"}`}>
               <div className="consultantImage2"></div>
               <div className="consultantInfo">
                 <div className="consultantInfocontents">
@@ -54,7 +63,7 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            <div className="carouselBlock">
+            <div className={`carouselBlock ${animate && "animated"}`}>
               <div className="consultantImage1"></div>
               <div className="consultantInfo">
                 <div className="consultantInfocontents">
@@ -76,7 +85,7 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            <div className="carouselBlock">
+            <div className={`carouselBlock ${animate && "animated"}`}>
               <div className="consultantImage2"></div>
               <div className="consultantInfo">
                 <div className="consultantInfocontents">
@@ -99,7 +108,7 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            <div className="carouselBlock">
+            <div className={`carouselBlock ${animate && "animated"}`}>
               <div className="consultantImage1"></div>
               <div className="consultantInfo">
                 <div className="consultantInfocontents">
@@ -123,7 +132,7 @@ const Blog = () => {
             </div>
           </Carousel>
         </div>
-        <div className="blogInfo">
+        <div className={`blogInfo ${animate && "animated"}`}>
           <div className="dot">
             <AsteriskSvg />
           </div>

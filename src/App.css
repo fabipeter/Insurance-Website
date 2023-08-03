@@ -10,6 +10,22 @@ body {
   overflow-x: hidden;
   background-color: #080c18;
 }
+@keyframes appearIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .font-face-gr {
   font-family: "GratelosBold";
@@ -25,7 +41,7 @@ body {
   margin: 0px 50px;
 }
 .bannerSection {
-  padding: 50px 50px 0px 70px;
+  padding: 50px 50px 40px 70px;
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
   /* background-color: var(--mainBlue); */
@@ -51,6 +67,7 @@ nav {
 .logo {
   display: flex;
   align-items: center;
+  /* animation: appearIn 2s ease-in forwards; */
 }
 .logo img {
   height: 5rem;
@@ -59,23 +76,19 @@ nav {
 .logo svg {
   height: 50px;
   width: 50px;
-  /* animation: ini 3s ease-in backwards; */
-  animation: spinner 3s ease-out infinite;
 }
-/* @keyframes ini {
- 100%{
-  transform: translateX(100%);
- }
-} */
-@keyframes spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo.animated svg {
+  height: 50px;
+  width: 50px;
+  animation-name: appearIn, spinner;
+  animation-timing-function: ease-in, ease-out;
+  animation-duration: 2s, 3s;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: forwards, none;
+  animation-iteration-count: 1, infinite;
+  /* animation: appearIn 2s ease-in forwards, spinner 3s ease-out infinite 3s; */
+  /* animation: spinner 3s ease-out infinite 3s; */
 }
-
 /*Styling Links*/
 .nav-links {
   display: flex;
@@ -95,7 +108,29 @@ nav {
 }
 .nav-links li {
   position: relative;
+  /* animation: appearIn 2s ease-in forwards; */
 }
+.nav-links.animated li:nth-child(1) { 
+  animation: appearIn 0.5s ease-in forwards;
+  /* animation-duration: 0.5s; */
+}
+.nav-links.animated li:nth-child(2) { 
+  animation: appearIn 1s ease-in forwards;
+  /* animation-duration: 1s; */
+}
+.nav-links.animated li:nth-child(3) { 
+  animation: appearIn 1.5s ease-in forwards;
+  /* animation-duration: 1.5s; */
+}
+.nav-links.animated li:nth-child(4) { 
+  animation: appearIn 2s ease-in forwards;
+  /* animation-duration: 2s; */
+}
+.nav-links.animated li:nth-child(5) { 
+  animation: appearIn 2.5s ease-in forwards;
+  /* animation-duration: 2.5s; */
+}
+
 .nav-links li a::before {
   content: "";
   display: block;
@@ -120,6 +155,16 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+}
+.nav-button-links li {
+}
+.nav-button-links.animated li:nth-child(1) {
+  animation: appearIn 3s ease-in forwards;
+  /* animation-duration: 3s; */
+}
+.nav-button-links.animated li:nth-child(2) {
+  animation: appearIn 3.5s ease-in forwards;
+  /* animation-duration: 3.5s; */
 }
 
 /*Styling Buttons*/

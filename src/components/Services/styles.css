@@ -1,6 +1,23 @@
+@keyframes appearIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes animatedBackground {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .servicesMain {
   height: 700px;
-  padding: 100px 80px 0px 70px;
+  padding: 100px 80px 40px 70px;
 }
 
 .firstRow {
@@ -26,6 +43,10 @@
   position: relative;
   margin-right: 20px;
 }
+.cell1.animated {
+  animation: appearIn 1s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 .cell2 {
   width: 15%;
   height: 90%;
@@ -36,13 +57,20 @@
   border-radius: 200px;
   margin-right: 20px;
 }
-
+.cell2.animated {
+  animation: animatedBackground 1.3s ease-in-out forwards;
+  transform-origin: 0% 100%;
+}
 .cell3 {
   width: 33%;
   height: 90%;
   border-radius: 70px;
   background-color: #082037;
   /* position: relative; */
+}
+.cell3.animated {
+  animation: appearIn 2s ease-out forwards;
+  transform-origin: 50% 50%;
 }
 .cell3contents {
   padding-top: 40px;
@@ -72,19 +100,26 @@
   background-repeat: no-repeat;
   position: relative;
 }
+.cell4.animated {
+  animation: appearIn 2.4s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 
 .cell5 {
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/pexels-tomáš-malík-2581922\ copy.jpg);
+  background: url(../../assets/pexels-tomáš-malík-2581922\ copy.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
   position: relative;
 }
-
+.cell5.animated {
+  animation: appearIn 3s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 .cell6 {
   width: 32%;
   height: 90%;
@@ -95,7 +130,10 @@
   background-repeat: no-repeat;
   position: relative;
 }
-
+.cell6.animated {
+  animation: appearIn 3.5s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 .service-button {
   color: #ffffff;
   background-color: #080c18;

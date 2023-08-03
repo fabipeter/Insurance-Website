@@ -1,6 +1,6 @@
 .careerMain {
   display: flex;
-  padding: 40px 60px 0px 60px;
+  padding: 100px 60px 100px 60px;
 }
 
 .careerText {
@@ -24,7 +24,21 @@
   font-size: 165px;
   line-height: 1em;
 }
-
+.careerText.animated div:nth-child(1) {
+  animation: appearIn 0.7s ease-in forwards;
+  transform-origin: -100% 100%;
+  /* animation-duration: 0.7s; */
+}
+.careerText.animated div:nth-child(2) {
+  animation: appearIn 1s ease-in forwards;
+  transform-origin: -100% 100%;
+  /* animation-duration: 1s; */
+}
+.careerText.animated div:nth-child(3) {
+  animation: appearIn 1.5s ease-in forwards;
+  transform-origin: -100% 100%;
+  /* animation-duration: 1.5s; */
+}
 .careerInfo {
   width: 70%;
   display: flex;
@@ -43,6 +57,14 @@
 .careerInfo .infoChild:nth-child(2) {
   padding-bottom: 2em;
 }
+.careerInfo.animated .infoChild:nth-child(1) {
+  animation: appearIn 1.5s ease-in forwards;
+  transform-origin: 50% 50%;
+}
+.careerInfo.animated .infoChild:nth-child(2) {
+  animation: appearIn 2s ease-in forwards;
+  transform-origin: 50% 50%;
+}
 .careerInfo .infoImageChild {
   width: 85%;
   height: 580px;
@@ -54,6 +76,12 @@
   box-shadow: unset;
   /* box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415); */
 }
+
+.careerInfo.animated .infoImageChild {
+  animation: animatedBackground 3s ease-in-out forwards;
+  transform-origin: 0% 100%;
+}
+
 .careerInfo .infoChild .dot {
   height: 45px;
   width: 45px;
@@ -94,6 +122,10 @@
   /* padding-left: 40px; */
   display: flex;
   justify-content: start;
+}
+.careerInfo.animated .careerInfoButton {
+  animation: appearIn 2.5s ease-in forwards;
+  transform-origin: 50% 50%;
 }
 .career-button {
   color: #cf6077;

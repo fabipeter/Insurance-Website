@@ -2,15 +2,16 @@ import React from "react";
 import "./styles.css";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk-379465.svg";
 
-const Career = () => {
+const Career = (props) => {
+  const { animate, innerRef } = props;
   return (
-    <div id="Career" className="careerMain">
-      <div className="careerText">
+    <div id="Career" className="careerMain" ref={innerRef}>
+      <div className={`careerText ${animate && "animated"}`}>
         <div className=" font-face-gr">Support</div>
         <div className=" font-face-gr">at every</div>
         <div className=" font-face-gr">Step</div>
       </div>
-      <div className="careerInfo">
+      <div className={`careerInfo ${animate && "animated"}`}>
         <div className="info">
           <div className="infoChild">
             <span className="dot">
