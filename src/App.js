@@ -143,23 +143,23 @@ function App() {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="#Services" onClick={() => setServices()}>
+                <a href="#Services" onClick={() => setServices("")}>
                   Services{" "}
                 </a>
                 {/* <DropDownSvg className="navDropDown" /> */}
               </li>
               <li>
-                <a href="#About" onClick={() => setAbout()}>
+                <a href="#About" onClick={() => setAbout("")}>
                   About us
                 </a>
               </li>
               <li>
-                <a href="#Blog" onClick={() => setBlog()}>
+                <a href="#Blog" onClick={() => setBlog("")}>
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#Career" onClick={() => setCareer()}>
+                <a href="#Career" onClick={() => setCareer("")}>
                   Career
                 </a>
               </li>
