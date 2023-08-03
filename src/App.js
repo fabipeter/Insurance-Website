@@ -127,6 +127,12 @@ function App() {
     // ,setBase,setServices,setBlog,setCareer,setAbout
   ]);
 
+  // use Effect hook for services animation on page load
+  useEffect(() => {
+    if (window.scrollY === 0) {
+      setAnimateServices(false);
+    }
+  }, []);
   return (
     <div className="wrapper">
       <div className="HomePage">
@@ -147,9 +153,8 @@ function App() {
               </li>
               <li>
                 <a href="#Services" onClick={() => setServices("")}>
-                  Services{" "}
+                  Services <DropDownSvg className="navDropDown" />
                 </a>
-                <DropDownSvg className="navDropDown" />
               </li>
               <li>
                 <a href="#About" onClick={() => setAbout("")}>

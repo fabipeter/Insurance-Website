@@ -94,7 +94,7 @@ nav {
   display: flex;
   list-style: none;
   width: 100%;
-  padding: 0 161px;
+  padding: 0 71px 0 160px;
   justify-content: space-evenly;
   align-items: center;
   /* text-transform: uppercase; */
@@ -102,9 +102,13 @@ nav {
 .nav-links li a {
   text-decoration: none;
   margin: 0 14px;
+  display: flex;
 }
 .nav-links li a:hover {
   color: var(--mainSkyBlue);
+}
+.nav-links li a:hover svg{
+  fill: var(--mainSkyBlue) !important;
 }
 .nav-links li {
   position: relative;
@@ -145,13 +149,14 @@ nav {
   width: 80%;
 }
 .navDropDown {
-  margin-bottom: -4px;
-  margin-left: -14px;
+  /* margin-bottom: -20px; */
+  margin-left: 4px;
+  margin-top: 2px;
 }
 .nav-button-links {
   display: flex;
   list-style: none;
-  padding: 0 14px;
+  padding: 0 0 0 10px;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
