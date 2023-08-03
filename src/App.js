@@ -122,7 +122,10 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleOnScroll);
     };
-  }, [direction]);
+  }, [
+    direction,
+    // ,setBase,setServices,setBlog,setCareer,setAbout
+  ]);
 
   return (
     <div className="wrapper">
@@ -146,7 +149,7 @@ function App() {
                 <a href="#Services" onClick={() => setServices("")}>
                   Services{" "}
                 </a>
-                {/* <DropDownSvg className="navDropDown" /> */}
+                <DropDownSvg className="navDropDown" />
               </li>
               <li>
                 <a href="#About" onClick={() => setAbout("")}>

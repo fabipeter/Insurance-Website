@@ -156,8 +156,8 @@ nav {
   align-items: center;
   width: 100%;
 }
-.nav-button-links li {
-}
+/* .nav-button-links li {
+} */
 .nav-button-links.animated li:nth-child(1) {
   animation: appearIn 3s ease-in forwards;
   /* animation-duration: 3s; */
