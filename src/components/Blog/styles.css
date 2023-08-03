@@ -11,6 +11,7 @@
   height: 700px;
   padding: 160px 100px 0px 100px;
   position: relative;
+  /* width: 100%; */
 }
 .blogWrapper {
   display: flex;
@@ -138,6 +139,7 @@
 }
 
 .blogInfo {
+  width: 35%;
   display: flex;
   padding: 120px 50px;
 }

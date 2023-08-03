@@ -1,14 +1,6 @@
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .aboutMain {
   position: relative;
+  /* width: 100%; */
   padding: 140px 60px 0px 60px;
   height: 700px;
   background-image: linear-gradient(
@@ -22,6 +14,16 @@
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .aboutFirstRow {
   display: flex;
   /* justify-content: space-between; */
@@ -48,7 +50,7 @@
 }
 .question.animated {
   animation: appearIn 1s ease-in forwards;
-  transform-origin: -100% 100%;
+  transform-origin: 0% 100%;
 }
 .questionMark {
   font-size: 67px;
@@ -79,23 +81,23 @@
 
 .aboutInsuranceOptions.animated div:nth-child(1) {
   animation: appearIn 1.5s ease-in forwards;
-  transform-origin: 50% 50%;
+  transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(2) {
   animation: appearIn 1.9s ease-in forwards;
-  transform-origin: 50% 50%;
+  transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(3) {
   animation: appearIn 2.3s ease-in forwards;
-  transform-origin: 50% 50%;
+  transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(4) {
   animation: appearIn 2.7s ease-in forwards;
-  transform-origin: 50% 50%;
+  transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(5) {
   animation: appearIn 3.1s ease-in forwards;
-  transform-origin: 50% 50%;
+  transform-origin: 0% 100%;
 }
 
 .aboutForm {
@@ -108,14 +110,14 @@
   margin-right: 40px;
 }
 .firstField.animated {
-  animation: fadeIn 1.5s ease-in forwards;
+  animation: fadeIn 2s ease-in forwards;
   transform-origin: 50% 50%;
 }
 .secondField {
   width: 50%;
 }
 .secondField.animated {
-  animation: fadeIn 2.3s ease-in forwards;
+  animation: fadeIn 2.5s ease-in forwards;
   transform-origin: 50% 50%;
 }
 .label {

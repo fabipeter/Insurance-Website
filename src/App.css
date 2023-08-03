@@ -33,12 +33,12 @@ body {
 .wrapper {
   justify-content: center;
   display: flex;
+  padding: 50px 0px 40px 0px;
 }
 .HomePage {
   width: 95%;
   max-width: 1800px;
-  padding: 50px 50px 40px 50px;
-  margin: 0px 50px;
+  /* margin: 0px 50px; */
 }
 .bannerSection {
   padding: 50px 50px 40px 70px;
@@ -110,23 +110,23 @@ nav {
   position: relative;
   /* animation: appearIn 2s ease-in forwards; */
 }
-.nav-links.animated li:nth-child(1) { 
+.nav-links.animated li:nth-child(1) {
   animation: appearIn 0.5s ease-in forwards;
   /* animation-duration: 0.5s; */
 }
-.nav-links.animated li:nth-child(2) { 
+.nav-links.animated li:nth-child(2) {
   animation: appearIn 1s ease-in forwards;
   /* animation-duration: 1s; */
 }
-.nav-links.animated li:nth-child(3) { 
+.nav-links.animated li:nth-child(3) {
   animation: appearIn 1.5s ease-in forwards;
   /* animation-duration: 1.5s; */
 }
-.nav-links.animated li:nth-child(4) { 
+.nav-links.animated li:nth-child(4) {
   animation: appearIn 2s ease-in forwards;
   /* animation-duration: 2s; */
 }
-.nav-links.animated li:nth-child(5) { 
+.nav-links.animated li:nth-child(5) {
   animation: appearIn 2.5s ease-in forwards;
   /* animation-duration: 2.5s; */
 }

@@ -18,6 +18,7 @@
 .servicesMain {
   height: 700px;
   padding: 100px 80px 40px 70px;
+  /* width: 100%; */
 }
 
 .firstRow {

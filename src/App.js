@@ -10,22 +10,20 @@ import About from "./components/About/About";
 import { useEffect, useRef, useState } from "react";
 
 function App() {
-  const [animate, setAnimate] = useState(false);
-  const [animateBanner, setAnimateBanner] = useState(false);
-  const [animateServices, setAnimateServices] = useState(false);
-  const [animateBlog, setAnimateBlog] = useState(false);
-  const [animateCareer, setAnimateCareer] = useState(false);
-  const [animateAbout, setAnimateAbout] = useState(false);
+  const [animate, setAnimate] = useState(true);
+  const [animateBanner, setAnimateBanner] = useState(true);
+  const [animateServices, setAnimateServices] = useState(true);
+  const [animateBlog, setAnimateBlog] = useState(true);
+  const [animateCareer, setAnimateCareer] = useState(true);
+  const [animateAbout, setAnimateAbout] = useState(true);
 
   const myBaseRef = useRef(null);
-  // const myBannerRef = useRef(null);
   const myServicesRef = useRef(null);
   const myBlogRef = useRef(null);
   const myCareerRef = useRef(null);
   const myAboutRef = useRef(null);
 
   const executeBaseScroll = () => myBaseRef.current.scrollIntoView();
-  // const executeBannerScroll = () => myBannerRef.current.scrollIntoView();
   const executeServicesScroll = () => myServicesRef.current.scrollIntoView();
   const executeBlogScroll = () => myBlogRef.current.scrollIntoView();
   const executeCareerScroll = () => myCareerRef.current.scrollIntoView();
@@ -49,9 +47,9 @@ function App() {
   const setServices = (dir) => {
     // setDirection(dir);
     // console.log(dir);
+    setAnimateServices(true);
     setAnimate(false);
     setAnimateBanner(false);
-    setAnimateServices(true);
     setAnimateBlog(false);
     setAnimateCareer(false);
     setAnimateAbout(false);
@@ -60,10 +58,10 @@ function App() {
   const setBlog = (dir) => {
     // setDirection(dir);
     // console.log(dir);
+    setAnimateBlog(true);
     setAnimate(false);
     setAnimateBanner(false);
     setAnimateServices(false);
-    setAnimateBlog(true);
     setAnimateCareer(false);
     setAnimateAbout(false);
     executeBlogScroll();
@@ -71,11 +69,11 @@ function App() {
   const setCareer = (dir) => {
     // setDirection(dir);
     // console.log(dir);
+    setAnimateCareer(true);
     setAnimate(false);
     setAnimateBanner(false);
     setAnimateServices(false);
     setAnimateBlog(false);
-    setAnimateCareer(true);
     setAnimateAbout(false);
     executeCareerScroll();
     // setDirection(dir);
@@ -83,12 +81,12 @@ function App() {
   const setAbout = (dir) => {
     // setDirection(dir);
     // console.log(dir);
+    setAnimateAbout(true);
     setAnimate(false);
     setAnimateBanner(false);
     setAnimateServices(false);
     setAnimateBlog(false);
     setAnimateCareer(false);
-    setAnimateAbout(true);
     executeAboutScroll();
   };
 
@@ -126,14 +124,6 @@ function App() {
     };
   }, [direction]);
 
-  useEffect(() => {
-    if (window.scrollY === 0) {
-      // setBase();
-      setAnimate(true);
-      setAnimateBanner(true);
-    }
-  }, []);
-
   return (
     <div className="wrapper">
       <div className="HomePage">
@@ -153,17 +143,25 @@ function App() {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="#Services">Services </a>
+                <a href="#Services" onClick={() => setServices()}>
+                  Services{" "}
+                </a>
                 {/* <DropDownSvg className="navDropDown" /> */}
               </li>
               <li>
-                <a href="#About">About us</a>
+                <a href="#About" onClick={() => setAbout()}>
+                  About us
+                </a>
               </li>
               <li>
-                <a href="#Blog">Blog</a>
+                <a href="#Blog" onClick={() => setBlog()}>
+                  Blog
+                </a>
               </li>
               <li>
-                <a href="#Career">Career</a>
+                <a href="#Career" onClick={() => setCareer()}>
+                  Career
+                </a>
               </li>
             </ul>
             <ul className={`nav-button-links ${animate && "animated"}`}>
