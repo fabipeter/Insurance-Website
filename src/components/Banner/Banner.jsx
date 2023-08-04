@@ -30,7 +30,7 @@ const Banner = (props) => {
             <span className="dot">
               <AsteriskSvg />
             </span>
-            <div className="infotext">
+            <div className="bannerInfotext">
               <div>We offer a choice of low</div>
               <div>dedactibles and include</div>
               <div>no cost value-added</div>

@@ -131,9 +131,14 @@
   cursor: pointer;
 }
 .downarrow {
-  width: fit-content;
+  /* width: 64px;
   border-bottom-left-radius: 200px;
-  border-bottom-right-radius: 200px;
+  border-bottom-right-radius: 200px; */
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   border-top: transparent;
   padding-bottom: 1em;
   padding-top: 1em;
