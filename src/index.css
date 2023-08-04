@@ -7,10 +7,10 @@
   --mainSkyBlue: #84d7e9;
 }
 @font-face {
-  font-family: "PoppinsBold";
-  src: local("PoppinsBold"),
-    url("./fonts/Poppins/Poppins-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-family: "PoppinsMedium";
+  src: local("PoppinsMedium"),
+    url("./fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 100;
 }
 @font-face {
   font-family: "GratelosBold";
@@ -30,11 +30,13 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  font-family: "Poppins", sans-serif, "PoppinsBold";
+  font-family: "Poppins", "PoppinsMedium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.font-face-gr {
+  font-family: "GratelosBold";
+}
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace; */
