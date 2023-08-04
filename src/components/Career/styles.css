@@ -27,17 +27,17 @@
   line-height: 1em;
 }
 .careerText.animated div:nth-child(1) {
-  animation: appearIn 0.7s ease-in forwards;
+  animation: appearIn 0.5s ease-in forwards;
   transform-origin: -100% 100%;
   /* animation-duration: 0.7s; */
 }
 .careerText.animated div:nth-child(2) {
-  animation: appearIn 1s ease-in forwards;
+  animation: appearIn 0.7s ease-in forwards;
   transform-origin: -100% 100%;
   /* animation-duration: 1s; */
 }
 .careerText.animated div:nth-child(3) {
-  animation: appearIn 1.5s ease-in forwards;
+  animation: appearIn 0.9s ease-in forwards;
   transform-origin: -100% 100%;
   /* animation-duration: 1.5s; */
 }
@@ -60,17 +60,17 @@
   padding-bottom: 2em;
 }
 .careerInfo.animated .infoChild:nth-child(1) {
-  animation: appearIn 1.5s ease-in forwards;
-  transform-origin: 50% 50%;
+  animation: appearIn 0.9s ease-in forwards;
+  transform-origin: 0% 50%;
 }
 .careerInfo.animated .infoChild:nth-child(2) {
-  animation: appearIn 2s ease-in forwards;
-  transform-origin: 50% 50%;
+  animation: appearIn 1.2s ease-in forwards;
+  transform-origin: 0% 50%;
 }
 .careerInfo .infoImageChild {
   width: 85%;
   height: 580px;
-  background: url(../../assets/pexels-kampus-production-6248428\ copy.jpg);
+  background: url(../../assets/grandmachild.jpeg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@
 }
 
 .careerInfo.animated .infoImageChild {
-  animation: animatedBackground 3s ease-in-out forwards;
+  animation: animatedBackground 1.4s ease-in-out forwards;
   transform-origin: 0% 100%;
 }
 
@@ -101,7 +101,9 @@
   fill: var(--mainBlue);
   transform: rotate(85deg);
 }
-
+.careerInfo.animated svg {
+  animation: spinner 5s ease-out infinite 0.8s;
+}
 .careerInfo .infoChild:nth-child(2) .dot svg {
   height: 30px;
   width: 30px;
@@ -125,19 +127,19 @@
   display: flex;
   justify-content: start;
 }
-.careerInfo.animated .careerInfoButton {
-  animation: appearIn 2.5s ease-in forwards;
-  transform-origin: 50% 50%;
+.careerInfo.animated .career-button {
+  animation: appearIn 1.6s ease-in forwards;
+  transform-origin: 0% 50%;
 }
 .career-button {
   color: #cf6077;
   background-color: #080c18;
   border: 1.5px solid #e36b7a;
   border-radius: 2em;
-  padding: 1rem 1rem;
+  padding: 1.1rem 1.1rem;
   font-size: 1rem;
   cursor: pointer;
-  width: 270px;
+  width: 340px;
   text-align: center;
   margin-bottom: 30px;
 }

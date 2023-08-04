@@ -1,18 +1,35 @@
+@keyframes animateGradient {
+  from {
+    background-image: transparent;
+  }
+  to {
+    background-image: linear-gradient(
+      to bottom,
+      transparent,
+      transparent,
+      transparent,
+      #091222,
+      #081426
+    );
+  }
+}
+
 .aboutMain {
   position: relative;
   /* width: 100%; */
   padding: 140px 60px 0px 60px;
   height: 700px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     #080c18,
     #090e1b,
     #09101f,
     #091222,
     #081426
-  );
+  ); */
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
+  animation: animateGradient 2.3s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -49,7 +66,7 @@
   font-family: "GratelosBold";
 }
 .question.animated {
-  animation: appearIn 1s ease-in forwards;
+  animation: appearIn 0.55s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .questionMark {
@@ -73,6 +90,7 @@
   background-color: #131d2c;
   font-size: 14px;
   font-weight: 400;
+  letter-spacing: -0.5px;
 }
 .aboutInsuranceOptions div:first-child {
   background-color: #e5e4e2;
@@ -80,23 +98,23 @@
 }
 
 .aboutInsuranceOptions.animated div:nth-child(1) {
-  animation: appearIn 1.5s ease-in forwards;
+  animation: appearIn 0.85s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(2) {
-  animation: appearIn 1.9s ease-in forwards;
+  animation: appearIn 1.2s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(3) {
-  animation: appearIn 2.3s ease-in forwards;
+  animation: appearIn 1.39s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(4) {
-  animation: appearIn 2.7s ease-in forwards;
+  animation: appearIn 1.59s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .aboutInsuranceOptions.animated div:nth-child(5) {
-  animation: appearIn 3.1s ease-in forwards;
+  animation: appearIn 1.9s ease-in forwards;
   transform-origin: 0% 100%;
 }
 
@@ -110,20 +128,21 @@
   margin-right: 40px;
 }
 .firstField.animated {
-  animation: fadeIn 2s ease-in forwards;
+  animation: fadeIn 1.2s ease-in forwards;
   transform-origin: 50% 50%;
 }
 .secondField {
   width: 50%;
 }
 .secondField.animated {
-  animation: fadeIn 2.5s ease-in forwards;
+  animation: fadeIn 1.49s ease-in forwards;
   transform-origin: 50% 50%;
 }
 .label {
   font-size: 12px;
   font-weight: 100;
   padding-bottom: 10px;
+  color: #c9bdbd;
 }
 
 input {
@@ -160,15 +179,15 @@ input::placeholder {
   padding-bottom: 15px;
 }
 .aboutCell2.animated .heading:nth-child(1) {
-  animation: appearIn 1.5s ease-in forwards;
+  animation: appearIn 1s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .aboutCell2.animated .heading:nth-child(2) {
-  animation: appearIn 2s ease-in forwards;
+  animation: appearIn 1.25s ease-in forwards;
   transform-origin: 0% 100%;
 }
 .aboutCell2.animated .heading:nth-child(3) {
-  animation: appearIn 2.5s ease-in forwards;
+  animation: appearIn 1.5s ease-in forwards;
   transform-origin: 0% 100%;
 }
 
@@ -179,20 +198,20 @@ input::placeholder {
   color: #838790;
 }
 
-.aboutCell2.animated .serviceOption .d-flex:nth-child(1) {
-  animation: appearIn 2s ease-in forwards;
+.aboutCell2.animated .d-flex1 {
+  animation: appearIn 1.1s ease-in forwards;
   transform-origin: 50% 50%;
 }
-.aboutCell2.animated .serviceOption .d-flex:nth-child(2) {
-  animation: appearIn 2.5s ease-in forwards;
+.aboutCell2.animated .d-flex2 {
+  animation: appearIn 1.45s ease-in forwards;
+  transform-origin: 50% -50%;
+}
+.aboutCell2.animated .d-flex3 {
+  animation: appearIn 1.45s ease-in forwards;
   transform-origin: 50% 50%;
 }
-.aboutCell2.animated .serviceOption .d-flex:nth-child(3) {
-  animation: appearIn 2.5s ease-in forwards;
-  transform-origin: 50% 50%;
-}
-.aboutCell2.animated .serviceOption .d-flex:nth-child(4) {
-  animation: appearIn 3s ease-in forwards;
+.aboutCell2.animated .d-flex4 {
+  animation: appearIn 1.65s ease-in forwards;
   transform-origin: 50% 50%;
 }
 
@@ -202,7 +221,7 @@ input::placeholder {
   justify-content: start;
 }
 .aboutCalculateButton.animated {
-  animation: appearIn 2.8s ease-in forwards;
+  animation: appearIn 1.6s ease-in forwards;
   transform-origin: 50% 50%;
 }
 .about-button {
@@ -247,13 +266,13 @@ input::placeholder {
 .aboutCell3.animated svg {
   animation-name: appearIn, spinner;
   animation-timing-function: ease-in, ease-out;
-  animation-duration: 2s, 3s;
-  animation-delay: 0s, 3s;
+  animation-duration: 1.75s, 3s;
+  animation-delay: 0s, 1.75s;
   animation-fill-mode: forwards, none;
   animation-iteration-count: 1, infinite;
 }
 .aboutCell3.animated .label {
-  animation: appearIn 3s ease-in forwards;
+  animation: appearIn 1.9s ease-in forwards;
 }
 @keyframes spinner {
   from {
@@ -272,5 +291,5 @@ input::placeholder {
 }
 
 .aboutCell4.animated {
-  animation: appearIn 3s ease-in forwards;
+  animation: appearIn 2.1s ease-in forwards;
 }

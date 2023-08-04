@@ -13,8 +13,12 @@ const Services = (props) => {
           <div className={`cell2 ${animate && "animated"}`}></div>
           <div className={`cell3 ${animate && "animated"}`}>
             <div className="cell3contents">
-              <div className="cell3Title font-face-gr">Best choice</div>
-              <div className="cell3Text">
+              <div
+                className={`cell3Title ${animate && "animated"} font-face-gr`}
+              >
+                Best choice
+              </div>
+              <div className={`cell3Text ${animate && "animated"}`}>
                 Not all insurance are the same. That's{" "}
                 <div>why agency knows that your insurance</div>
                 <div>should be customized to fit your</div>

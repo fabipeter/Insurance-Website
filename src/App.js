@@ -7,7 +7,7 @@ import { FiKey } from "react-icons/fi";
 import Blog from "./components/Blog/Blog";
 import Career from "./components/Career/Career";
 import About from "./components/About/About";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 function App() {
   const [animate, setAnimate] = useState(true);
@@ -31,11 +31,9 @@ function App() {
 
   const oldScrollY = useRef(0);
 
-  const [direction, setDirection] = useState("down");
-  // console.log("currentdir:", direction);
-  const setBase = (dir) => {
-    // setDirection(dir);
-    // console.log(dir);
+  const [direction, setDirection] = useState("");
+
+  const setBase = useCallback((dir) => {
     setAnimate(true);
     setAnimateBanner(true);
     setAnimateServices(false);
@@ -43,10 +41,8 @@ function App() {
     setAnimateCareer(false);
     setAnimateAbout(false);
     executeBaseScroll();
-  };
-  const setServices = (dir) => {
-    // setDirection(dir);
-    // console.log(dir);
+  }, []);
+  const setServices = useCallback((dir) => {
     setAnimateServices(true);
     setAnimate(false);
     setAnimateBanner(false);
@@ -54,10 +50,8 @@ function App() {
     setAnimateCareer(false);
     setAnimateAbout(false);
     executeServicesScroll();
-  };
-  const setBlog = (dir) => {
-    // setDirection(dir);
-    // console.log(dir);
+  }, []);
+  const setBlog = useCallback((dir) => {
     setAnimateBlog(true);
     setAnimate(false);
     setAnimateBanner(false);
@@ -65,10 +59,8 @@ function App() {
     setAnimateCareer(false);
     setAnimateAbout(false);
     executeBlogScroll();
-  };
-  const setCareer = (dir) => {
-    // setDirection(dir);
-    // console.log(dir);
+  }, []);
+  const setCareer = useCallback((dir) => {
     setAnimateCareer(true);
     setAnimate(false);
     setAnimateBanner(false);
@@ -76,11 +68,8 @@ function App() {
     setAnimateBlog(false);
     setAnimateAbout(false);
     executeCareerScroll();
-    // setDirection(dir);
-  };
-  const setAbout = (dir) => {
-    // setDirection(dir);
-    // console.log(dir);
+  }, []);
+  const setAbout = useCallback((dir) => {
     setAnimateAbout(true);
     setAnimate(false);
     setAnimateBanner(false);
@@ -88,8 +77,7 @@ function App() {
     setAnimateBlog(false);
     setAnimateCareer(false);
     executeAboutScroll();
-  };
-
+  }, []);
   useEffect(() => {
     const handleOnScroll = () => {
       if (window.scrollY > oldScrollY.current) {
@@ -97,7 +85,6 @@ function App() {
       } else {
         setDirection("up");
       }
-
       oldScrollY.current = window.scrollY;
       window.scrollY > 100 && window.scrollY < 846 && direction === "down"
         ? setServices("down")
@@ -107,32 +94,24 @@ function App() {
         ? setCareer("down")
         : window.scrollY > 2645 && window.scrollY < 3222 && direction === "down"
         ? setAbout("down")
-        : window.scrollY < 3180 && window.scrollY > 2546 && direction === "up"
+        : window.scrollY < 3380 && window.scrollY > 2546 && direction === "up"
         ? setCareer("up")
-        : window.scrollY < 2460 && window.scrollY > 1686 && direction === "up"
+        : window.scrollY < 2420 && window.scrollY > 1686 && direction === "up"
         ? setBlog("up")
-        : window.scrollY < 1580 && window.scrollY > 920 && direction === "up"
+        : window.scrollY < 1530 && window.scrollY > 920 && direction === "up"
         ? setServices("up")
-        : window.scrollY < 750 && window.scrollY > 100 && direction === "up"
+        : window.scrollY < 747 && window.scrollY > 100 && direction === "up"
         ? setBase("down")
-        : (oldScrollY.current = window.scrollY);
+        : window.scrollY === 0 && direction !== "up"
+        ? setBase("down")
+        : console.log();
     };
-    // window.onscroll = () => {};
     window.addEventListener("scroll", handleOnScroll);
     return () => {
       window.removeEventListener("scroll", handleOnScroll);
     };
-  }, [
-    direction,
-    // ,setBase,setServices,setBlog,setCareer,setAbout
-  ]);
+  }, [direction, setAbout, setBase, setBlog, setCareer, setServices]);
 
-  // use Effect hook for services animation on page load
-  useEffect(() => {
-    if (window.scrollY === 0) {
-      setAnimateServices(false);
-    }
-  }, []);
   return (
     <div className="wrapper">
       <div className="HomePage">

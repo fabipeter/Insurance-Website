@@ -44,11 +44,11 @@ const About = (props) => {
           <div className={`aboutCell2 ${animate && "animated"}`}>
             <div className="serviceOption">
               <div className="heading">Insurance services</div>
-              <div className="d-flex">
+              <div className="d-flex1 d-flex">
                 <div className="option">Medical expenses</div>
                 <div className="option">Family health insurance</div>
               </div>
-              <div className="d-flex">
+              <div className="d-flex2 d-flex">
                 <div className="option">Vehicle damage</div>
                 <div className="option">Property loss</div>
                 <div className="option">Fire</div>
@@ -56,7 +56,7 @@ const About = (props) => {
             </div>
             <div className="serviceOption">
               <div className="heading">Company</div>
-              <div className="d-flex">
+              <div className="d-flex3 d-flex">
                 <div className="option">About us</div>
                 <div className="option">Career</div>
                 <div className="option">Help</div>
@@ -66,7 +66,7 @@ const About = (props) => {
             </div>
             <div className="serviceOption">
               <div className="heading">Bonus</div>
-              <div className="d-flex">
+              <div className="d-flex4 d-flex">
                 <div className="option">Gift certificate</div>
                 <div className="option">Affiliate Program</div>
                 <div className="option">Trainings</div>

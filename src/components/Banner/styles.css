@@ -39,17 +39,17 @@
 }
 
 .bannerText.animated div:nth-child(1) {
-  animation: appearIn 0.7s ease-in forwards;
+  animation: appearIn 0.2s ease-in forwards;
   transform-origin: -100% 100%;
   /* animation-duration: 0.7s; */
 }
 .bannerText.animated div:nth-child(2) {
-  animation: appearIn 1s ease-in forwards;
+  animation: appearIn 0.5s ease-in forwards;
   transform-origin: -100% 100%;
   /* animation-duration: 1s; */
 }
 .bannerText.animated div:nth-child(3) {
-  animation: appearIn 1.5s ease-in forwards;
+  animation: appearIn 0.8s ease-in forwards;
   transform-origin: -100% 100%;
   /* animation-duration: 1.5s; */
 }
@@ -78,19 +78,19 @@
   padding-bottom: 3.5em;
 }
 .bannerInfoChild.animated .bannerInfoGrandChild:nth-child(1) {
-  animation: appearIn 1.5s ease-in forwards;
+  animation: appearIn 0.85s ease-in forwards;
   transform-origin: -50% 100%;
   /* animation-duration: 1.5s; */
 }
 .bannerInfoChild.animated .bannerInfoGrandChild:nth-child(2) {
-  animation: appearIn 2s ease-in forwards;
+  animation: appearIn 0.9s ease-in forwards;
   transform-origin: -50% 100%;
   /* animation-duration: 2s; */
 }
 .bannerInfoImageChild {
   width: 100%;
   height: 550px;
-  background: url(../../assets/pexels-alessandro-kelvin-2376268\ copy.jpg);
+  background: url(../../assets/hotairballoon.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@
 }
 
 .bannerInfoImageChild.animated {
-  animation: animatedBackground 3s ease-in-out forwards;
+  animation: animatedBackground 0.95s ease-in-out forwards;
   transform-origin: 0% 100%;
 }
 
@@ -120,7 +120,9 @@
   fill: var(--mainBlue);
   transform: rotate(105deg);
 }
-
+.bannerInfoChild.animated svg {
+  animation: spinner 5s ease-out infinite 0.8s;
+}
 .bannerInfotext {
   padding-top: 1.5em;
 }
@@ -148,11 +150,12 @@
   );
 }
 .downarrow.animated {
-  animation: appearIn 1.8s ease-in forwards;
+  animation: appearIn 0.98s ease-in forwards;
+  transform-origin: 100% 0%;
 }
-.downarrow svg {
+.downarrow.animated svg {
   width: fit-content;
   fill: aliceblue;
   stroke: #ffffff;
-  animation: appearIn 2s ease-in forwards;
+  animation: appearIn 1.3s ease-in forwards;
 }

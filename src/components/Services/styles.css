@@ -37,7 +37,7 @@
   width: 50%;
   height: 90%;
   border-radius: 45px;
-  background: url(../../assets/pexels-jean-van-der-meulen-1457842\ copy.jpg);
+  background: url(../../assets/interior.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,7 +45,11 @@
   margin-right: 20px;
 }
 .cell1.animated {
-  animation: appearIn 1s ease-out forwards;
+  animation: appearIn 0.4s ease-out forwards;
+  transform-origin: 50% 50%;
+}
+.cell1.animated .service-button {
+  animation: appearIn 0.9s ease-out forwards;
   transform-origin: 50% 50%;
 }
 .cell2 {
@@ -59,7 +63,7 @@
   margin-right: 20px;
 }
 .cell2.animated {
-  animation: animatedBackground 1.3s ease-in-out forwards;
+  animation: animatedBackground 0.8s ease-in-out forwards;
   transform-origin: 0% 100%;
 }
 .cell3 {
@@ -70,7 +74,7 @@
   /* position: relative; */
 }
 .cell3.animated {
-  animation: appearIn 2s ease-out forwards;
+  animation: appearIn 1.1s ease-out forwards;
   transform-origin: 50% 50%;
 }
 .cell3contents {
@@ -81,36 +85,51 @@
   display: flex;
   justify-content: center;
 }
+.cell3.animated .cell3Button {
+  animation: appearIn 2.1s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 .cell3Title {
   font-size: 55px;
   text-align: start;
   font-family: "GratelosBold";
+}
+.cell3Title.animated {
+  animation: appearIn 1.4s ease-out forwards;
+  transform-origin: 50% 50%;
 }
 .cell3Text {
   font-size: 14px;
   padding-top: 20px;
   padding-bottom: 100px;
 }
+.cell3Text.animated {
+  animation: appearIn 1.85s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 .cell4 {
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/pexels-jay-pizzle-3849554\ copy.jpg);
+  background:linear-gradient(rgba(19, 143, 162, 0.746),rgba(68, 84, 225, 0)),  url(../../assets/carimage.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .cell4.animated {
-  animation: appearIn 2.4s ease-out forwards;
+  animation: appearIn 1.4s ease-out forwards;
   transform-origin: 50% 50%;
 }
-
+.cell4.animated .service-button {
+  animation: appearIn 1.85s ease-out forwards;
+  transform-origin: 50% 50%;
+}
 .cell5 {
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/houseImage.jpg);
+  background: url(../../assets/redhouseimage.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -118,7 +137,11 @@
   position: relative;
 }
 .cell5.animated {
-  animation: appearIn 3s ease-out forwards;
+  animation: appearIn 1.8s ease-out forwards;
+  transform-origin: 50% 50%;
+}
+.cell5.animated .service-button {
+  animation: appearIn 2.25s ease-out forwards;
   transform-origin: 50% 50%;
 }
 .cell6 {
@@ -132,7 +155,11 @@
   position: relative;
 }
 .cell6.animated {
-  animation: appearIn 3.5s ease-out forwards;
+  animation: appearIn 2.2s ease-out forwards;
+  transform-origin: 50% 50%;
+}
+.cell6.animated .service-button {
+  animation: appearIn 2.3s ease-out forwards;
   transform-origin: 50% 50%;
 }
 .service-button {
