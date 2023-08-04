@@ -241,11 +241,16 @@ input::placeholder {
 .aboutCell3 svg {
   width: 50px;
   height: 50px;
-  animation: spinner 3s ease-out infinite;
+  /* animation: spinner 3s ease-out infinite; */
 }
 
 .aboutCell3.animated svg {
-  animation: appearIn 3s ease-in forwards;
+  animation-name: appearIn, spinner;
+  animation-timing-function: ease-in, ease-out;
+  animation-duration: 2s, 3s;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: forwards, none;
+  animation-iteration-count: 1, infinite;
 }
 .aboutCell3.animated .label {
   animation: appearIn 3s ease-in forwards;
