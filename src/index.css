@@ -35,7 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .font-face-gr {
-  font-family: "GratelosBold";
+  font-family: "GratelosBold" !important;
 }
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

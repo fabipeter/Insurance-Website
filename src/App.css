@@ -27,9 +27,6 @@ body {
   }
 }
 
-.font-face-gr {
-  font-family: "GratelosBold";
-}
 .wrapper {
   justify-content: center;
   display: flex;

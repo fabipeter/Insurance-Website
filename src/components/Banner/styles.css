@@ -33,9 +33,6 @@
 .bannerText div {
   font-size: 185px;
   line-height: 1em;
-  font-family: "GratelosBold";
-  /* animation: appearIn 0s ease-in forwards;
-  transform-origin: -100% 100%; */
 }
 
 .bannerText.animated div:nth-child(1) {

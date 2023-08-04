@@ -55,7 +55,7 @@
 .cell2 {
   width: 15%;
   height: 90%;
-  background: url(../../assets/pexels-quang-nguyen-vinh-11669595\ copy.jpg);
+  background: url(../../assets/lifeguard.jpeg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -111,7 +111,8 @@
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background:linear-gradient(rgba(19, 143, 162, 0.746),rgba(68, 84, 225, 0)),  url(../../assets/carimage.jpg);
+  background: linear-gradient(rgba(19, 143, 162, 0.746), rgba(68, 84, 225, 0)),
+    url(../../assets/carimage.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -148,7 +149,7 @@
   width: 32%;
   height: 90%;
   border-radius: 40px;
-  background: url(../../assets/pexels-tima-miroshnichenko-5452239\ copy.jpg);
+  background: url(../../assets/pillsimage.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
