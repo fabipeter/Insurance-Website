@@ -129,7 +129,7 @@ function App() {
     };
   }, [direction, setAbout, setBase, setBlog, setCareer, setServices]);
 
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   return (
     <div className="wrapper">
       <div className="HomePage">
