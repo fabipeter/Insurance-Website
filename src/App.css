@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "PoppinsMedium";
+  src: local("PoppinsMedium"),
+    url("./fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "GratelosBold";
+  src: local("GratelosBold"),
+    url("./fonts/Gratelos/GratelosDisplay.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "BebasNeueBold";
+  src: local("BebasNeueBold"),
+    url("./fonts/Bebas/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;

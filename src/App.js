@@ -7,6 +7,7 @@ import { FiKey } from "react-icons/fi";
 import Blog from "./components/Blog/Blog";
 import Career from "./components/Career/Career";
 import About from "./components/About/About";
+// import ScrollAnimation from "react-animate-on-scroll";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function App() {
