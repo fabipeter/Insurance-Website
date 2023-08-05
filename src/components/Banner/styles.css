@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "GratelosBold";
+  src: local("GratelosBold"),
+    url("./fonts/Gratelos/GratelosDisplay.ttf") format("truetype");
+  font-weight: bold;
+}
+.font-face-gr {
+  font-family: "GratelosBold" !important;
+}
 @keyframes appearIn {
   from {
     transform: scale(0);

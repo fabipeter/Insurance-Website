@@ -16,6 +16,9 @@
     url("./fonts/Bebas/BebasNeue-Regular.ttf") format("truetype");
   font-weight: bold;
 }
+.font-face-gr {
+  font-family: "GratelosBold" !important;
+}
 
 * {
   margin: 0;
