@@ -8,6 +8,7 @@ import Blog from "./components/Blog/Blog";
 import Career from "./components/Career/Career";
 import About from "./components/About/About";
 // import ScrollAnimation from "react-animate-on-scroll";
+import { Scrollbars } from "react-custom-scrollbars";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function App() {
@@ -24,11 +25,26 @@ function App() {
   const myCareerRef = useRef(null);
   const myAboutRef = useRef(null);
 
-  const executeBaseScroll = () => myBaseRef.current.scrollIntoView();
-  const executeServicesScroll = () => myServicesRef.current.scrollIntoView();
-  const executeBlogScroll = () => myBlogRef.current.scrollIntoView();
-  const executeCareerScroll = () => myCareerRef.current.scrollIntoView();
-  const executeAboutScroll = () => myAboutRef.current.scrollIntoView();
+  const executeBaseScroll = () =>
+    myBaseRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  const executeServicesScroll = () =>
+    myServicesRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  const executeBlogScroll = () =>
+    myBlogRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  const executeCareerScroll = () =>
+    myCareerRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  const executeAboutScroll = () =>
+    myAboutRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
 
   const oldScrollY = useRef(0);
 
@@ -87,21 +103,21 @@ function App() {
         setDirection("up");
       }
       oldScrollY.current = window.scrollY;
-      window.scrollY > 100 && window.scrollY < 846 && direction === "down"
+      window.scrollY > 200 && window.scrollY < 846 && direction === "down"
         ? setServices("down")
-        : window.scrollY > 916 && window.scrollY < 1686 && direction === "down"
+        : window.scrollY > 976 && window.scrollY < 1686 && direction === "down"
         ? setBlog("down")
-        : window.scrollY > 1766 && window.scrollY < 2446 && direction === "down"
+        : window.scrollY > 1806 && window.scrollY < 2446 && direction === "down"
         ? setCareer("down")
-        : window.scrollY > 2645 && window.scrollY < 3222 && direction === "down"
+        : window.scrollY > 2695 && window.scrollY < 3222 && direction === "down"
         ? setAbout("down")
-        : window.scrollY < 3380 && window.scrollY > 2546 && direction === "up"
+        : window.scrollY < 2600 && window.scrollY > 2121 && direction === "up"
         ? setCareer("up")
-        : window.scrollY < 2420 && window.scrollY > 1686 && direction === "up"
+        : window.scrollY < 1820 && window.scrollY > 1421 && direction === "up"
         ? setBlog("up")
-        : window.scrollY < 1530 && window.scrollY > 920 && direction === "up"
+        : window.scrollY < 1120 && window.scrollY > 721 && direction === "up"
         ? setServices("up")
-        : window.scrollY < 747 && window.scrollY > 100 && direction === "up"
+        : window.scrollY < 500 && window.scrollY > 100 && direction === "up"
         ? setBase("down")
         : window.scrollY === 0 && direction !== "up"
         ? setBase("down")
@@ -113,60 +129,67 @@ function App() {
     };
   }, [direction, setAbout, setBase, setBlog, setCareer, setServices]);
 
+  console.log(window.scrollY);
   return (
     <div className="wrapper">
       <div className="HomePage">
         <div className="bannerSection" ref={myBaseRef}>
           <nav>
-            <div className={`logo ${animate && "animated"}`}>
-              {/* <img src="logo.svg" alt="Logo" /> */}
-              <LogoSvg />
-            </div>
-            <div className="hamburger">
+            {animate && (
+              <div className={`logo ${animate && "animated"}`}>
+                {/* <img src="logo.svg" alt="Logo" /> */}
+                <LogoSvg />
+              </div>
+            )}
+            {/* <div className="hamburger">
               <div className="line1"></div>
               <div className="line2"></div>
               <div className="line3"></div>
-            </div>
-            <ul className={`nav-links ${animate && "animated"}`}>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="#Services" onClick={() => setServices("")}>
-                  Services <DropDownSvg className="navDropDown" />
-                </a>
-              </li>
-              <li>
-                <a href="#About" onClick={() => setAbout("")}>
-                  About us
-                </a>
-              </li>
-              <li>
-                <a href="#Blog" onClick={() => setBlog("")}>
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#Career" onClick={() => setCareer("")}>
-                  Career
-                </a>
-              </li>
-            </ul>
-            <ul className={`nav-button-links ${animate && "animated"}`}>
-              <li>
-                <button className="join-button" href="#">
-                  Contact us
-                </button>
-              </li>
-              <li>
-                <button className="login-button" href="#">
-                  <FiKey />
-                  Login
-                </button>
-              </li>
-            </ul>
+            </div> */}
+            {animate && (
+              <ul className={`nav-links ${animate && "animated"}`}>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="#Services" onClick={() => setServices("")}>
+                    Services <DropDownSvg className="navDropDown" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#About" onClick={() => setAbout("")}>
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="#Blog" onClick={() => setBlog("")}>
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#Career" onClick={() => setCareer("")}>
+                    Career
+                  </a>
+                </li>
+              </ul>
+            )}
+            {animate && (
+              <ul className={`nav-button-links ${animate && "animated"}`}>
+                <li>
+                  <button className="join-button" href="#">
+                    Contact us
+                  </button>
+                </li>
+                <li>
+                  <button className="login-button" href="#">
+                    <FiKey />
+                    Login
+                  </button>
+                </li>
+              </ul>
+            )}
           </nav>
-          <Banner animate={animateBanner} />
+          <Banner animate={animateBanner} innerRef={myBaseRef} />
         </div>
         <Services innerRef={myServicesRef} animate={animateServices} />
         <Blog innerRef={myBlogRef} animate={animateBlog} />
