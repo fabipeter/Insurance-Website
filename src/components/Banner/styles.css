@@ -1,7 +1,7 @@
 @font-face {
   font-family: "GratelosBold";
   src: local("GratelosBold"),
-    url("./fonts/Gratelos/GratelosDisplay.ttf") format("truetype");
+    url(../../fonts/Gratelos/GratelosDisplay.ttf) format("truetype");
   font-weight: bold;
 }
 .font-face-gr {
