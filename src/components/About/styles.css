@@ -272,6 +272,11 @@ input::placeholder {
   animation-iteration-count: 1, infinite;
 }
 .aboutCell3.animated .label {
+  font-size: 16px;
+  font-weight: 100;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  color: #b3b8c2;
   animation: appearIn 1.9s ease-in forwards;
 }
 @keyframes spinner {

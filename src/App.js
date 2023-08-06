@@ -130,6 +130,28 @@ function App() {
   }, [direction, setAbout, setBase, setBlog, setCareer, setServices]);
 
   // console.log(window.scrollY);
+
+  useEffect(() => {
+    window.scrollY > 200 && window.scrollY < 846
+      ? setServices("down")
+      : window.scrollY > 976 && window.scrollY < 1686
+      ? setBlog("down")
+      : window.scrollY > 1806 && window.scrollY < 2446
+      ? setCareer("down")
+      : window.scrollY > 2695 && window.scrollY < 3222
+      ? setAbout("down")
+      : window.scrollY < 2600 && window.scrollY > 2121
+      ? setCareer("up")
+      : window.scrollY < 1820 && window.scrollY > 1421
+      ? setBlog("up")
+      : window.scrollY < 1120 && window.scrollY > 721
+      ? setServices("up")
+      : window.scrollY < 500 && window.scrollY > 100
+      ? setBase("down")
+      : window.scrollY === 0
+      ? setBase("down")
+      : console.log();
+  }, []);
   return (
     <div className="wrapper">
       <div className="HomePage">
