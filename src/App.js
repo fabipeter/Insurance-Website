@@ -8,7 +8,7 @@ import Blog from "./components/Blog/Blog";
 import Career from "./components/Career/Career";
 import About from "./components/About/About";
 // import ScrollAnimation from "react-animate-on-scroll";
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function App() {
@@ -151,7 +151,7 @@ function App() {
       : window.scrollY === 0
       ? setBase("down")
       : console.log();
-  }, []);
+  }, [setAbout, setBase, setBlog, setCareer, setServices]);
   return (
     <div className="wrapper">
       <div className="HomePage">

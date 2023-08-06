@@ -41,6 +41,9 @@
   /* font-weight: 900 !important; */
 }
 .bannerText div {
+  font-family: "GratelosBold" !important;
+  text-overflow: clip;
+  overflow: auto;
   font-size: 185px;
   line-height: 1em;
 }
