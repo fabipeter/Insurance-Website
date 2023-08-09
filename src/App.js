@@ -49,7 +49,12 @@ function App() {
   const oldScrollY = useRef(0);
 
   const [direction, setDirection] = useState("");
-
+  const setBaseDown = useCallback((dir) => {
+    setAnimateServices(false);
+    setAnimateBlog(false);
+    setAnimateCareer(false);
+    setAnimateAbout(false);
+  }, []);
   const setBase = useCallback((dir) => {
     setAnimate(true);
     setAnimateBanner(true);
@@ -149,7 +154,7 @@ function App() {
       : window.scrollY < 500 && window.scrollY > 100
       ? setBase("down")
       : window.scrollY === 0
-      ? setBase("down")
+      ? setBaseDown("down")
       : console.log();
   }, [setAbout, setBase, setBlog, setCareer, setServices]);
   return (
