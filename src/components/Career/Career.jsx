@@ -3,9 +3,13 @@ import "./styles.css";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk-379465.svg";
 
 const Career = (props) => {
-  const { animate, innerRef } = props;
+  const { animate, innerRef,heightAnimate } = props;
   return (
-    <div id="Career" className="careerMain" ref={innerRef}>
+    <div
+      id="Career"
+      className={`careerMain ${animate && "animated"} ${heightAnimate && "heightAnimate"}`}
+      ref={innerRef}
+    >
       {animate && (
         <div className={`careerText ${animate && "animated"}`}>
           <div className=" font-face-gr">Support</div>

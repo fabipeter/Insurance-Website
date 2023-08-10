@@ -17,10 +17,13 @@
 
 .servicesMain {
   height: 700px;
-  padding: 0px 80px 0px 70px;
+  padding: 250px 80px 0px 70px;
   /* width: 100%; */
 }
-
+.servicesMain.heightAnimate {
+  height: 10px !important;
+  padding: 0px !important;
+}
 .firstRow {
   display: flex;
   /* justify-content: space-between; */

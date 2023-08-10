@@ -4,9 +4,13 @@ import { ReactComponent as LogoAltSvg } from "../../assets/svgs/logoalt.svg";
 import { ReactComponent as CalenderSvg } from "../../assets/svgs/calender.svg";
 
 const About = (props) => {
-  const { animate, innerRef } = props;
+  const { animate, innerRef,heightAnimate } = props;
   return (
-    <div id="About" className="aboutMain" ref={innerRef}>
+    <div
+      id="About"
+      className={`aboutMain ${animate && "animated"} ${heightAnimate && "heightAnimate"}`}
+      ref={innerRef}
+    >
       {animate && (
         <div className="aboutFirstRow">
           <div className="aboutCell1">

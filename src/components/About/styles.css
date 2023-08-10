@@ -17,7 +17,7 @@
 .aboutMain {
   position: relative;
   /* width: 100%; */
-  padding: 0px 60px 0px 60px;
+  padding: 150px 60px 0px 60px;
   height: 700px;
   /* background-image: linear-gradient(
     to bottom,
@@ -30,6 +30,12 @@
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
   animation: animateGradient 2.3s ease-in forwards;
+}
+.aboutMain.heightAnimate {
+  height: 10px !important;
+  padding: 0px !important;
+  background: transparent !important;
+  background-image: none !important;
 }
 
 @keyframes fadeIn {
