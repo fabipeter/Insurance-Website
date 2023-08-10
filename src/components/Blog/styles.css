@@ -17,9 +17,13 @@
 
 .blogMain {
   height: 700px;
-  padding: 0px 100px 0px 100px;
+  padding: 250px 100px 0px 100px;
   position: relative;
   /* width: 100%; */
+}
+.blogMain.heightAnimate {
+  height: 10px !important;
+  padding: 0px !important;
 }
 .blogWrapper {
   display: flex;

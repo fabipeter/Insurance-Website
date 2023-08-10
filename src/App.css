@@ -58,7 +58,7 @@ body {
   width: 95%;
   max-width: 1800px;
   height: 100%;
-  min-height: 3000px;
+  /* min-height: 3000px; */
   /* margin: 0px 50px; */
 }
 .bannerSection {

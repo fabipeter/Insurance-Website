@@ -5,10 +5,14 @@ import { Carousel } from "react-responsive-carousel";
 import { ReactComponent as AsteriskSvg } from "../../assets/svgs/noun-asterisk2.svg";
 
 const Blog = (props) => {
-  const { animate, innerRef } = props;
+  const { animate, innerRef,heightAnimate } = props;
   const [animated, setAnimated] = useState(0);
   return (
-    <div id="Blog" className="blogMain" ref={innerRef}>
+    <div
+      id="Blog"
+      className={`blogMain ${animate && "animated"} ${heightAnimate && "heightAnimate"}`}
+      ref={innerRef}
+    >
       {/* <div> */}
       {animate && (
         <div className="blogWrapper">

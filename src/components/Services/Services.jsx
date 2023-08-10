@@ -2,9 +2,13 @@ import React from "react";
 import "./styles.css";
 
 const Services = (props) => {
-  const { animate, innerRef } = props;
+  const { animate, innerRef, heightAnimate } = props;
   return (
-    <div id="Services" className="servicesMain" ref={innerRef}>
+    <div
+      id="Services"
+      className={`servicesMain ${animate && "animated"} ${heightAnimate && "heightAnimate"}`}
+      ref={innerRef}
+    >
       {animate && (
         <div className="firstRow">
           <div className={`cell1 ${animate && "animated"}`}>

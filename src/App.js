@@ -7,48 +7,29 @@ import { FiKey } from "react-icons/fi";
 import Blog from "./components/Blog/Blog";
 import Career from "./components/Career/Career";
 import About from "./components/About/About";
-// import ScrollAnimation from "react-animate-on-scroll";
-// import { Scrollbars } from "react-custom-scrollbars";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const [animate, setAnimate] = useState(true);
-  const [animateBanner, setAnimateBanner] = useState(true);
-  const [animateServices, setAnimateServices] = useState(true);
-  const [animateBlog, setAnimateBlog] = useState(true);
-  const [animateCareer, setAnimateCareer] = useState(true);
-  const [animateAbout, setAnimateAbout] = useState(true);
+  const [animateBanner, setAnimateBanner] = useState(false);
+  const [animateServices, setAnimateServices] = useState(false);
+  const [animateBlog, setAnimateBlog] = useState(false);
+  const [animateCareer, setAnimateCareer] = useState(false);
+  const [animateAbout, setAnimateAbout] = useState(false);
 
-  const myBaseRef = useRef(null);
-  const myServicesRef = useRef(null);
-  const myBlogRef = useRef(null);
-  const myCareerRef = useRef(null);
-  const myAboutRef = useRef(null);
+  const [heightAnimateServices, setHeightAnimateServices] = useState(false);
+  const [heightAnimateBlog, setHeightAnimateBlog] = useState(false);
+  const [heightAnimateCareer, setHeightAnimateCareer] = useState(false);
+  const [heightAnimateAbout, setHeightAnimateAbout] = useState(false);
 
-  const executeBaseScroll = () =>
-    myBaseRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  const executeServicesScroll = () =>
-    myServicesRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  const executeBlogScroll = () =>
-    myBlogRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  const executeCareerScroll = () =>
-    myCareerRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  const executeAboutScroll = () =>
-    myAboutRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
+  const { ref: myBaseRef, inView: myBaseInView } = useInView();
+  const { ref: myServicesRef, inView: myServicesInView } = useInView();
+  const { ref: myBlogRef, inView: myBlogInView } = useInView();
+  const { ref: myCareerRef, inView: myCareerInView } = useInView();
+  const { ref: myAboutRef, inView: myAboutInView } = useInView();
 
   const oldScrollY = useRef(0);
-
-  const [direction, setDirection] = useState("");
 
   const setBase = useCallback((dir) => {
     setAnimate(true);
@@ -57,7 +38,6 @@ function App() {
     setAnimateBlog(false);
     setAnimateCareer(false);
     setAnimateAbout(false);
-    executeBaseScroll();
   }, []);
   const setServices = useCallback((dir) => {
     setAnimateServices(true);
@@ -66,7 +46,6 @@ function App() {
     setAnimateBlog(false);
     setAnimateCareer(false);
     setAnimateAbout(false);
-    executeServicesScroll();
   }, []);
   const setBlog = useCallback((dir) => {
     setAnimateBlog(true);
@@ -75,7 +54,6 @@ function App() {
     setAnimateServices(false);
     setAnimateCareer(false);
     setAnimateAbout(false);
-    executeBlogScroll();
   }, []);
   const setCareer = useCallback((dir) => {
     setAnimateCareer(true);
@@ -84,7 +62,6 @@ function App() {
     setAnimateServices(false);
     setAnimateBlog(false);
     setAnimateAbout(false);
-    executeCareerScroll();
   }, []);
   const setAbout = useCallback((dir) => {
     setAnimateAbout(true);
@@ -93,65 +70,68 @@ function App() {
     setAnimateServices(false);
     setAnimateBlog(false);
     setAnimateCareer(false);
-    executeAboutScroll();
   }, []);
+
+  useEffect(() => {
+    if (myBaseInView) {
+      setBase();
+    } else if (myServicesInView) {
+      setServices();
+    } else if (myBlogInView) {
+      setBlog();
+    } else if (myCareerInView) {
+      setCareer();
+    } else if (myAboutInView) {
+      setAbout();
+    } else setBase();
+  }, [
+    myBaseInView,
+    myServicesInView,
+    myBlogInView,
+    myCareerInView,
+    myAboutInView,
+    setBase,
+    setServices,
+    setBlog,
+    setCareer,
+    setAbout,
+  ]);
+
   useEffect(() => {
     const handleOnScroll = () => {
       if (window.scrollY > oldScrollY.current) {
-        setDirection("down");
+        setHeightAnimateAbout(false);
+        setHeightAnimateCareer(false);
+        setHeightAnimateBlog(false);
+        setHeightAnimateServices(false);
       } else {
-        setDirection("up");
+        if (myCareerInView) {
+          setHeightAnimateAbout(true);
+        }
+        if (myBlogInView) {
+          setHeightAnimateCareer(true);
+        }
+        if (myServicesInView) {
+          setHeightAnimateBlog(true);
+        }
+        if (myBaseInView) {
+          setHeightAnimateServices(true);
+        }
       }
       oldScrollY.current = window.scrollY;
-      window.scrollY > 200 && window.scrollY < 846 && direction === "down"
-        ? setServices("down")
-        : window.scrollY > 976 && window.scrollY < 1686 && direction === "down"
-        ? setBlog("down")
-        : window.scrollY > 1806 && window.scrollY < 2446 && direction === "down"
-        ? setCareer("down")
-        : window.scrollY > 2695 && window.scrollY < 3222 && direction === "down"
-        ? setAbout("down")
-        : window.scrollY < 2600 && window.scrollY > 2121 && direction === "up"
-        ? setCareer("up")
-        : window.scrollY < 1820 && window.scrollY > 1421 && direction === "up"
-        ? setBlog("up")
-        : window.scrollY < 1120 && window.scrollY > 721 && direction === "up"
-        ? setServices("up")
-        : window.scrollY < 500 && window.scrollY > 100 && direction === "up"
-        ? setBase("down")
-        : window.scrollY === 0 && direction !== "up"
-        ? setBase("down")
-        : console.log();
     };
     window.addEventListener("scroll", handleOnScroll);
     return () => {
       window.removeEventListener("scroll", handleOnScroll);
     };
-  }, [direction, setAbout, setBase, setBlog, setCareer, setServices]);
+  }, [
+    myAboutInView,
+    myBaseInView,
+    myBlogInView,
+    myCareerInView,
+    myServicesInView,
+  ]);
 
-  // console.log(window.scrollY);
-
-  useEffect(() => {
-    window.scrollY > 200 && window.scrollY < 846
-      ? setServices("down")
-      : window.scrollY > 976 && window.scrollY < 1686
-      ? setBlog("down")
-      : window.scrollY > 1806 && window.scrollY < 2446
-      ? setCareer("down")
-      : window.scrollY > 2695 && window.scrollY < 3222
-      ? setAbout("down")
-      : window.scrollY < 2600 && window.scrollY > 2121
-      ? setCareer("up")
-      : window.scrollY < 1820 && window.scrollY > 1421
-      ? setBlog("up")
-      : window.scrollY < 1120 && window.scrollY > 721
-      ? setServices("up")
-      : window.scrollY < 500 && window.scrollY > 100
-      ? setBase("down")
-      : window.scrollY === 0
-      ? setBase("down")
-      : console.log();
-  }, [setAbout, setBase, setBlog, setCareer, setServices]);
   return (
     <div className="wrapper">
       <div className="HomePage">
@@ -159,39 +139,27 @@ function App() {
           <nav>
             {animate && (
               <div className={`logo ${animate && "animated"}`}>
-                {/* <img src="logo.svg" alt="Logo" /> */}
                 <LogoSvg />
               </div>
             )}
-            {/* <div className="hamburger">
-              <div className="line1"></div>
-              <div className="line2"></div>
-              <div className="line3"></div>
-            </div> */}
             {animate && (
               <ul className={`nav-links ${animate && "animated"}`}>
                 <li>
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="#Services" onClick={() => setServices("")}>
+                  <a href="#Services">
                     Services <DropDownSvg className="navDropDown" />
                   </a>
                 </li>
                 <li>
-                  <a href="#About" onClick={() => setAbout("")}>
-                    About us
-                  </a>
+                  <a href="#About">About us</a>
                 </li>
                 <li>
-                  <a href="#Blog" onClick={() => setBlog("")}>
-                    Blog
-                  </a>
+                  <a href="#Blog">Blog</a>
                 </li>
                 <li>
-                  <a href="#Career" onClick={() => setCareer("")}>
-                    Career
-                  </a>
+                  <a href="#Career">Career</a>
                 </li>
               </ul>
             )}
@@ -213,10 +181,26 @@ function App() {
           </nav>
           <Banner animate={animateBanner} innerRef={myBaseRef} />
         </div>
-        <Services innerRef={myServicesRef} animate={animateServices} />
-        <Blog innerRef={myBlogRef} animate={animateBlog} />
-        <Career innerRef={myCareerRef} animate={animateCareer} />
-        <About innerRef={myAboutRef} animate={animateAbout} />
+        <Services
+          innerRef={myServicesRef}
+          animate={animateServices}
+          heightAnimate={heightAnimateServices}
+        />
+        <Blog
+          innerRef={myBlogRef}
+          animate={animateBlog}
+          heightAnimate={heightAnimateBlog}
+        />
+        <Career
+          innerRef={myCareerRef}
+          animate={animateCareer}
+          heightAnimate={heightAnimateCareer}
+        />
+        <About
+          innerRef={myAboutRef}
+          animate={animateAbout}
+          heightAnimate={heightAnimateAbout}
+        />
       </div>
     </div>
   );

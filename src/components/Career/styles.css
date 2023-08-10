@@ -1,10 +1,14 @@
 .careerMain {
   display: flex;
-  padding: 0px 40px 0px 90px;
+  padding: 250px 40px 0px 90px;
   height: 700px;
   /* width: 100%; */
 }
-
+.careerMain.heightAnimate {
+  height: 10px !important;
+  padding: 0px !important;
+  background: transparent;
+}
 .careerText {
   /* display: flex; */
   align-items: start;
