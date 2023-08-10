@@ -29,6 +29,8 @@
   ); */
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
+}
+.aboutMain.animated {
   animation: animateGradient 2.3s ease-in forwards;
 }
 .aboutMain.heightAnimate {

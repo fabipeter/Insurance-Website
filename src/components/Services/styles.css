@@ -48,7 +48,8 @@
   margin-right: 20px;
 }
 .cell1.cell1.animated:hover {
-  box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
+  box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.316);
+  transform: scale(1.02) !important;
 }
 .cell1.animated {
   animation: appearIn 0.4s ease-out forwards;
@@ -70,6 +71,7 @@
 }
 .cell2.animated:hover {
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
+  transform: scale(1.02) !important;
 }
 .cell2.animated {
   animation: animatedBackground 0.8s ease-in-out forwards;
@@ -129,6 +131,7 @@
 }
 .cell4.animated:hover {
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
+  transform: scale(1.02) !important;
 }
 .cell4.animated {
   animation: appearIn 1.4s ease-out forwards;
@@ -150,6 +153,7 @@
 }
 .cell5.animated:hover {
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
+  transform: scale(1.02) !important;
 }
 .cell5.animated {
   animation: appearIn 1.8s ease-out forwards;
@@ -171,6 +175,7 @@
 }
 .cell6.animated:hover {
   box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.415);
+  transform: scale(1.02) !important;
 }
 .cell6.animated {
   animation: appearIn 2.2s ease-out forwards;

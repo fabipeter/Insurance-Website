@@ -67,6 +67,7 @@
 .bannerInfo {
   width: 50%;
   display: flex;
+  justify-content: center;
 }
 .bannerinfoGrandChild {
   width: 50%;
@@ -78,6 +79,7 @@
 }
 .bannerInfoimage {
   width: 40%;
+  max-width: 247.3px;
   margin-top: 55px;
   /* background-color: #111620; */
   border-radius: 200px;
