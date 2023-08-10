@@ -31,7 +31,6 @@ function App() {
 
   const oldScrollY = useRef(0);
 
-
   const setBase = useCallback((dir) => {
     setAnimate(true);
     setAnimateBanner(true);
@@ -133,7 +132,6 @@ function App() {
     myServicesInView,
   ]);
 
-
   return (
     <div className="wrapper">
       <div className="HomePage">
@@ -150,18 +148,18 @@ function App() {
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="#Services">
+                  <a href="/">
                     Services <DropDownSvg className="navDropDown" />
                   </a>
                 </li>
                 <li>
-                  <a href="#About">About us</a>
+                  <a href="/">About us</a>
                 </li>
                 <li>
-                  <a href="#Blog">Blog</a>
+                  <a href="/">Blog</a>
                 </li>
                 <li>
-                  <a href="#Career">Career</a>
+                  <a href="/">Career</a>
                 </li>
               </ul>
             )}
