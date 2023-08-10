@@ -31,6 +31,7 @@ function App() {
 
   const oldScrollY = useRef(0);
 
+
   const setBase = useCallback((dir) => {
     setAnimate(true);
     setAnimateBanner(true);
@@ -131,6 +132,7 @@ function App() {
     myCareerInView,
     myServicesInView,
   ]);
+
 
   return (
     <div className="wrapper">
